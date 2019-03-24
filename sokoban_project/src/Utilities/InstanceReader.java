@@ -2,14 +2,13 @@ package Utilities;
 
 import Model.Instance;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class InstanceReader {
 
-    public static Instance readInstance(String archive){
+    public static Instance readInstanceFromFile(String archive){
         Instance instance = null;
 
         BufferedReader reader = null;
@@ -40,6 +39,31 @@ public class InstanceReader {
         }
 
         return instance;
+    }
+
+    public static List<Instance> readInstanceFromText(String text){
+        List<Instance> list = new ArrayList<>();
+        String[] arrayStates = text.split(";");
+
+        for (int x = 0; x < arrayStates.length; x++){
+            String[] rows = arrayStates[x].split("\n");
+            int columnCount = rows[0].trim().split(",").length;
+
+            if (columnCount > 1) {
+                Instance instance = new Instance(rows.length, columnCount);
+
+                for (int y = 0; y < rows.length; y++) {
+                    String[] columns = rows[y].trim().split(",");
+
+                    for (int z = 0; z < columns.length; z++)
+                        instance.getMap()[y][z] = columns[z];
+                }
+
+                list.add(instance);
+            }
+        }
+
+        return list;
     }
 
 }

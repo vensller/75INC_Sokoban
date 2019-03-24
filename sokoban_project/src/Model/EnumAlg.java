@@ -1,7 +1,7 @@
 package Model;
 
 public enum EnumAlg {
-    WIDTH("Largura"),
+    BREADTH_FIRST("Largura"),
     DEPTH("Profundidade"),
     BIDIRECTIONAL("Bidirecional"),
     MOUNTAINCLIMB("Subida da montanha"),

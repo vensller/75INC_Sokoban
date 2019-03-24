@@ -77,4 +77,30 @@ public class SokobanForm extends JFrame implements SokobanObserver {
         JOptionPane.showMessageDialog(this, "Fail to read the instance, please choose another!");
         lblArchive.setText("");
     }
+
+    @Override
+    public void solutionNotFound() {
+        JOptionPane.showMessageDialog(this, "Failed to found a solution!");
+    }
+
+    @Override
+    public void refreshTable(int solutionCount) {
+        tableModel.dataChanged();
+        tblGame.setModel(tableModel);
+        Thread t = new Thread(){
+            @Override
+            public void run(){
+                for (int x = 0; x < solutionCount; x++){
+                    controller.changeSolution(x);
+                    try {
+                        sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    repaint();
+                }
+            }
+        };
+        t.start();
+    }
 }
