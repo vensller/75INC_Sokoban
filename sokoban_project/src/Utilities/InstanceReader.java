@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class InstanceReader {
 
-    public Instance readInstance(String archive){
+    public static Instance readInstance(String archive){
         Instance instance = null;
 
         BufferedReader reader = null;

@@ -2,10 +2,37 @@ package Controller;
 
 import Model.EnumAlg;
 import Model.Instance;
+import Utilities.InstanceReader;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SokobanController {
 
     private Instance instance;
+    private List<SokobanObserver> observers;
+
+    private void notifyReadSuccess(){
+        for (SokobanObserver obs : observers)
+            obs.instanceReadSuccess();
+    }
+
+    private void notifyReadFail(){
+        for (SokobanObserver obs : observers)
+            obs.instanceReadFail();
+    }
+
+    public SokobanController(){
+        observers = new ArrayList<>();
+    }
+
+    public void observe(SokobanObserver observer){
+        observers.add(observer);
+    }
+
+    public void stopObserve(SokobanObserver observer){
+        observers.remove(observer);
+    }
 
     public String returnImageName(int row, int column){
         if (instance != null)
@@ -32,5 +59,17 @@ public class SokobanController {
             algorithms[e.ordinal()] = e.label;
 
         return algorithms;
+    }
+
+    public void readInstance(String archive){
+        instance = InstanceReader.readInstance(archive);
+
+        if (instance != null)
+            notifyReadSuccess();
+        else notifyReadFail();
+    }
+
+    public void runGame(int algorithm){
+
     }
 }

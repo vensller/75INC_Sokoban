@@ -40,4 +40,8 @@ public class TableModel extends AbstractTableModel {
         String imageName = controller.returnImageName(row, column);
         return images.get(imageName);
     }
+
+    public void dataChanged(){
+        fireTableDataChanged();
+    }
 }

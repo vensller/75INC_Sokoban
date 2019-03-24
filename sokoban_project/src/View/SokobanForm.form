@@ -8,7 +8,7 @@
     <properties/>
     <border type="line"/>
     <children>
-      <component id="1333e" class="javax.swing.JButton" binding="btnChooserArch">
+      <component id="1333e" class="javax.swing.JButton" binding="btnChooseArch">
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -16,7 +16,7 @@
           <text value="Choose Archive"/>
         </properties>
       </component>
-      <component id="881e9" class="javax.swing.JButton" binding="searchSolutionButton" default-binding="true">
+      <component id="881e9" class="javax.swing.JButton" binding="btnSearch">
         <constraints>
           <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -36,7 +36,9 @@
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <autoResizeMode value="0"/>
+        </properties>
       </component>
       <component id="a7cb9" class="javax.swing.JTextArea" binding="txaAlgorithm">
         <constraints>
