@@ -23,8 +23,28 @@ public class SokobanState implements Estado {
         return false;
     }
 
-    private boolean isDeadLock(String[][] cloneMap){
-        return false;
+    private boolean positionIsBlocked(int row, int column, String[][] cloneMap){
+        return cloneMap[row][column].equals("#")
+                || (cloneMap[row][column].equals("$"))
+                || (cloneMap[row][column].equals(".$"));
+    }
+
+    private boolean havePossibilityToFindPoint(int row, int column, String[][] cloneMap){
+        return !((cloneMap[row + 1][column].equals("#") && ((cloneMap[row][column - 1].equals("#")) || (cloneMap[row][column + 1].equals("#")))) //Linha abaixo e coluna esquerda ou direita tem parede
+                || (cloneMap[row - 1][column].equals("#") && ((cloneMap[row][column - 1].equals("#")) || (cloneMap[row][column + 1].equals("#"))))); //linha acima e coluna esquerda ou direita tem parede
+    }
+
+    private boolean isDeadLock(int row, int column, String[][] cloneMap){
+        boolean isAtPoint = (!cloneMap[row][column].equals(".$"));
+        boolean canMovement = ((cloneMap[row - 1][column].equals(" ") || cloneMap[row - 1][column].equals("@") || cloneMap[row - 1][column].equals(".@"))
+                            && (cloneMap[row + 1][column].equals(" ") || cloneMap[row + 1][column].equals("@") || cloneMap[row + 1][column].equals(".@"))
+                            && (cloneMap[row][column - 1].equals(" ") || cloneMap[row][column - 1].equals("@") || cloneMap[row][column - 1].equals(".@"))
+                            && (cloneMap[row][column + 1].equals(" ") || cloneMap[row][column + 1].equals("@") || cloneMap[row][column + 1].equals(".@")));
+
+
+        boolean deadLock = !isAtPoint && !canMovement && !havePossibilityToFindPoint(row, column, cloneMap);
+
+        return deadLock;
     }
 
     private boolean changeBoxPos(int rowBox, int columnBox, int newRow, int newColumn, String[][] cloneMap){
@@ -44,7 +64,7 @@ public class SokobanState implements Estado {
             cloneMap[newRow][newColumn] = newPos;
             cloneMap[rowBox][columnBox] = " ";
 
-            canChange = !isDeadLock(cloneMap);
+            canChange = !isDeadLock(newRow, newColumn, cloneMap);
         }
 
         return canChange;
