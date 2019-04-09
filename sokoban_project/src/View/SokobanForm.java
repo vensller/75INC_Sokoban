@@ -16,6 +16,7 @@ public class SokobanForm extends JFrame implements SokobanObserver {
     private JButton btnSearch;
     private JTextArea txaAlgorithm;
     private JLabel lblArchive;
+    private JScrollPane scrollPane;
     private TableRenderer tableRenderer;
     private TableModel tableModel;
     private SokobanController controller;
@@ -29,6 +30,7 @@ public class SokobanForm extends JFrame implements SokobanObserver {
     }
 
     private void initData(){
+        cleanLog();
         controller = new SokobanController();
         controller.observe(this);
         tableRenderer = new TableRenderer();
@@ -51,6 +53,7 @@ public class SokobanForm extends JFrame implements SokobanObserver {
                 int retorno = fileChooser.showOpenDialog(tblGame);
 
                 if (retorno == JFileChooser.APPROVE_OPTION){
+                    cleanLog();
                     lblArchive.setText(fileChooser.getSelectedFile().getName());
                     controller.readInstance(fileChooser.getSelectedFile().getAbsolutePath());
                 }
@@ -102,5 +105,26 @@ public class SokobanForm extends JFrame implements SokobanObserver {
             }
         };
         t.start();
+    }
+
+    @Override
+    public void stateCreated(int countState) {
+        txaAlgorithm.append("New state created. Created " + countState + " states.\n");
+        JScrollBar vertical = scrollPane.getVerticalScrollBar();
+        vertical.setValue(vertical.getMaximum());
+    }
+
+    @Override
+    public void stateVisited(int countState) {
+        txaAlgorithm.append("New state visited. Visited " + countState + " states.\n");
+        JScrollBar vertical = scrollPane.getVerticalScrollBar();
+        vertical.setValue(vertical.getMaximum());
+    }
+
+    @Override
+    public void cleanLog() {
+        txaAlgorithm.setText("Algorithm Result: \n");
+        JScrollBar vertical = scrollPane.getVerticalScrollBar();
+        vertical.setValue(vertical.getMaximum());
     }
 }

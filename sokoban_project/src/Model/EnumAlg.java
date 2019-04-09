@@ -3,8 +3,7 @@ package Model;
 public enum EnumAlg {
     BREADTH_FIRST("Largura"),
     DEPTH("Profundidade"),
-    BIDIRECTIONAL("Bidirecional"),
-    MOUNTAINCLIMB("Subida da montanha"),
+    ITERATIVEDEPTH("Profundidade iterativa"),
     ASTAR("A*");
 
     public final String label;

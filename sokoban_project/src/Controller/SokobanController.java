@@ -3,6 +3,7 @@ package Controller;
 import Model.EnumAlg;
 import Model.Instance;
 import Model.SokobanState;
+import Model.StateObserver;
 import Utilities.InstanceReader;
 import busca.BuscaLargura;
 import busca.Nodo;
@@ -10,11 +11,13 @@ import busca.Nodo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SokobanController {
+public class SokobanController implements StateObserver {
 
     private Instance instance;
     private List<SokobanObserver> observers;
     private List<Instance> solution;
+    private int countStateCreated;
+    private int countStateVisited;
 
     private void notifyReadSuccess(){
         for (SokobanObserver obs : observers)
@@ -34,6 +37,21 @@ public class SokobanController {
     private void notifyRefreshScreen(int solutionCount){
         for (SokobanObserver obs : observers)
             obs.refreshTable(solutionCount);
+    }
+
+    private void notifyStateCreated(){
+        for (SokobanObserver obs : observers)
+            obs.stateCreated(countStateCreated);
+    }
+
+    private void notifyStateVisited(){
+        for (SokobanObserver obs : observers)
+            obs.stateVisited(countStateVisited);
+    }
+
+    private void notifyCleanLog(){
+        for (SokobanObserver obs : observers)
+            obs.cleanLog();
     }
 
     public SokobanController(){
@@ -81,11 +99,13 @@ public class SokobanController {
 
     public void runGame(int alg){
         EnumAlg algorithm = EnumAlg.values()[alg];
+        countStateCreated = 0;
+        countStateVisited = 0;
 
         if (instance != null)
             switch (algorithm){
                 case BREADTH_FIRST:
-                    Nodo nodo = new BuscaLargura().busca(new SokobanState(instance.getMap()));
+                    Nodo nodo = new BuscaLargura().busca(new SokobanState(instance.getMap(), this));
 
                     if (nodo != null) {
                         solution = InstanceReader.readInstanceFromText(nodo.montaCaminho());
@@ -96,9 +116,7 @@ public class SokobanController {
                     break;
                 case DEPTH:
                     break;
-                case BIDIRECTIONAL:
-                    break;
-                case MOUNTAINCLIMB:
+                case ITERATIVEDEPTH:
                     break;
                 case ASTAR:
                     break;
@@ -107,5 +125,17 @@ public class SokobanController {
 
     public void changeSolution(int solutionIndex){
         instance = solution.get(solutionIndex);
+    }
+
+    @Override
+    public void stateCreated() {
+        countStateCreated++;
+        notifyStateCreated();
+    }
+
+    @Override
+    public void stateVisited() {
+        countStateVisited++;
+        notifyStateVisited();
     }
 }
