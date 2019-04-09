@@ -84,7 +84,7 @@ public class SokobanController {
 
         if (instance != null)
             switch (algorithm){
-                case BREADTH_FIRST:{
+                case BREADTH_FIRST:
                     Nodo nodo = new BuscaLargura().busca(new SokobanState(instance.getMap()));
 
                     if (nodo != null) {
@@ -94,19 +94,14 @@ public class SokobanController {
                     }else notifySolutionNotFound();
 
                     break;
-                }
-                case DEPTH:{
+                case DEPTH:
                     break;
-                }
-                case BIDIRECTIONAL:{
+                case BIDIRECTIONAL:
                     break;
-                }
-                case MOUNTAINCLIMB:{
+                case MOUNTAINCLIMB:
                     break;
-                }
-                case ASTAR:{
+                case ASTAR:
                     break;
-                }
             }
     }
 
