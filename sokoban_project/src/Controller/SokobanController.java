@@ -5,8 +5,7 @@ import Model.Instance;
 import Model.SokobanState;
 import Model.StateObserver;
 import Utilities.InstanceReader;
-import busca.BuscaLargura;
-import busca.Nodo;
+import busca.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,26 +100,30 @@ public class SokobanController implements StateObserver {
         EnumAlg algorithm = EnumAlg.values()[alg];
         countStateCreated = 0;
         countStateVisited = 0;
+        notifyCleanLog();
+        Nodo nodo = null;
 
-        if (instance != null)
-            switch (algorithm){
+        if (instance != null) {
+            switch (algorithm) {
                 case BREADTH_FIRST:
-                    Nodo nodo = new BuscaLargura().busca(new SokobanState(instance.getMap(), this));
-
-                    if (nodo != null) {
-                        solution = InstanceReader.readInstanceFromText(nodo.montaCaminho());
-                        notifyRefreshScreen(solution.size());
-
-                    }else notifySolutionNotFound();
-
+                    nodo = new BuscaLargura().busca(new SokobanState(instance.getMap(), this));
                     break;
                 case DEPTH:
+                    nodo = new BuscaProfundidade().busca(new SokobanState(instance.getMap(), this));
                     break;
                 case ITERATIVEDEPTH:
+                    nodo = new BuscaIterativo().busca(new SokobanState(instance.getMap(), this));
                     break;
                 case ASTAR:
+                    nodo = new AEstrela().busca(new SokobanState(instance.getMap(), this));
                     break;
             }
+
+            if (nodo != null) {
+                solution = InstanceReader.readInstanceFromText(nodo.montaCaminho());
+                notifyRefreshScreen(solution.size());
+            } else notifySolutionNotFound();
+        }
     }
 
     public void changeSolution(int solutionIndex){
