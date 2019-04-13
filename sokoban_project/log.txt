@@ -1,0 +1,8 @@
+Fim da busca. 123 nodos visitados em 69 mili-seg
+Solução encontrada!
+Fim da busca. 397 nodos visitados em 103 mili-seg
+Solução encontrada!
+Fim da busca. 397 nodos visitados em 239 mili-seg
+Solução encontrada!
+Solução encontrada!
+Fim da busca. 35 nodos visitados em 48 mili-seg

@@ -117,9 +117,13 @@ public class SokobanController implements StateObserver {
             }
 
             if (nodo != null) {
+                SolutionWriter.writeLog("Solução encontrada!");
                 solution = InstanceReader.readInstanceFromText(nodo.montaCaminho());
                 notifyRefreshScreen(solution.size());
-            } else notifySolutionNotFound();
+            } else {
+                SolutionWriter.writeLog("Solução não encontrada!");
+                notifySolutionNotFound();
+            }
         }
     }
 

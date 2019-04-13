@@ -1,13 +1,14 @@
 package Model;
 
 import busca.Estado;
+import busca.Heuristica;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class SokobanState implements Estado{
+public class SokobanState implements Estado, Heuristica {
 
     private String[][] map;
     private int rowPos;
@@ -15,6 +16,7 @@ public class SokobanState implements Estado{
     private StateObserver observer;
     private List<SokobanState> visited;
     private List<Coordinate> boxes;
+    private List<Coordinate> objectives;
 
     private boolean findPlayerPosition(){
         for (int x = 0; x < map.length; x++)
@@ -202,12 +204,22 @@ public class SokobanState implements Estado{
                     boxes.add(new Coordinate(x, y));
     }
 
+    private void createObjectives(){
+        objectives = new ArrayList<>();
+
+        for (int x = 0; x < map.length; x++)
+            for (int y = 0; y < map[x].length; y++)
+                if (map[x][y].equals(".") || map[x][y].equals(".+"))
+                    objectives.add(new Coordinate(x, y));
+    }
+
     public SokobanState(String[][] map, StateObserver observer, List<SokobanState> visited){
         this.map = map;
         this.observer = observer;
         this.visited = visited;
         observer.stateCreated();
         createBoxesList();
+        createObjectives();
     }
 
     @Override
@@ -270,5 +282,35 @@ public class SokobanState implements Estado{
         }
 
         return result;
+    }
+
+    @Override
+    public int h() {
+        int totalDistance = 0;
+
+        for (Coordinate box : boxes){
+            Coordinate obj = findBoxObjective(box);
+
+            if (obj != null)
+                totalDistance += Math.abs(box.getX() - obj.getX()) + Math.abs(box.getY() - obj.getY());
+        }
+
+        return totalDistance;
+    }
+
+    private Coordinate findBoxObjective(Coordinate box){
+        Coordinate objective = null;
+        double distance = Double.MAX_VALUE;
+
+        for (Coordinate obj : objectives){
+            double dist = Math.hypot(Math.abs(obj.getX() - box.getX()), Math.abs(obj.getY() - box.getY()));
+
+            if (dist < distance){
+                objective = obj;
+                distance = dist;
+            }
+        }
+
+        return objective;
     }
 }

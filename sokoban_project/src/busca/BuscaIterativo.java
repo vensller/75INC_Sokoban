@@ -52,7 +52,7 @@ public class BuscaIterativo extends BuscaProfundidade {
         int prof = 0;
         while (!parar) {
             status.profundidadeMax = prof;
-            setProfMax(prof++); // indica a profundidade maxima atual
+            setProfMax(prof + 10); // indica a profundidade maxima atual
             Nodo n = super.busca(inicial); 
             status.nroVisitados += super.status.nroVisitados; // acumula das varias buscas em profundidade
             if (n != null) {
