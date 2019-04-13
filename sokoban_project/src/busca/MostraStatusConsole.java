@@ -49,7 +49,6 @@ public class MostraStatusConsole extends Thread {
 
     protected void mostraFim() {
         println(": Fim da busca. "+status.nroVisitados+" nodos visitados em "+status.getTempoDecorrido()+" mili-seg.\n");
-        SolutionWriter.writeLog("Fim da busca. "+status.nroVisitados+" nodos visitados em "+status.getTempoDecorrido()+" mili-seg");
     }
     protected void mostra() {
         println("Status:");

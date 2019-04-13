@@ -1,5 +1,7 @@
 package busca;
 
+import Utilities.SolutionWriter;
+
 import java.util.Date;
 
 /**
@@ -30,6 +32,7 @@ public class Status {
         this.resolveu = true;
         if (ms != null) {
             ms.para();
+            SolutionWriter.writeLog("Fim da busca. "+nroVisitados+" nodos visitados em "+getTempoDecorrido()+" mili-seg");
         }
     }
 
