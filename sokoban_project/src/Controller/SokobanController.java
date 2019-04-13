@@ -5,8 +5,10 @@ import Model.Instance;
 import Model.SokobanState;
 import Model.StateObserver;
 import Utilities.InstanceReader;
+import Utilities.SolutionWriter;
 import busca.*;
 
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -86,7 +88,7 @@ public class SokobanController implements StateObserver {
         instances = InstanceReader.readInstancesFromPath(path);
 
         if (instances != null) {
-            instance = instances.get(1);
+            instance = instances.get(0);
             notifyReadSuccess();
         }
         else notifyReadFail();
@@ -135,5 +137,19 @@ public class SokobanController implements StateObserver {
     public void stateVisited(String stateLog) {
         countStateVisited++;
         notifyStateVisited(stateLog);
+    }
+
+    public void run() {
+        for (Instance i : instances){
+            instance = i;
+            SolutionWriter.writeLog("Level " + i + ". Busca em Largura");
+            runGame(0);
+            SolutionWriter.writeLog("Level " + i + ". Busca em Profundidade");
+            runGame(1);
+            SolutionWriter.writeLog("Level " + i + ". Busca em Profundidade Iterativa");
+            runGame(2);
+            SolutionWriter.writeLog("Level " + i + ". A*");
+            runGame(3);
+        }
     }
 }
