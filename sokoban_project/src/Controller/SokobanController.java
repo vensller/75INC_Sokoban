@@ -146,13 +146,13 @@ public class SokobanController implements StateObserver {
     public void run() {
         for (Instance i : instances){
             instance = i;
-            SolutionWriter.writeLog("Level " + i + ". Busca em Largura");
+            SolutionWriter.writeLog("Level " + instances.indexOf(i) + ". Busca em Largura");
             runGame(0);
-            SolutionWriter.writeLog("Level " + i + ". Busca em Profundidade");
+            SolutionWriter.writeLog("Level " + instances.indexOf(i) + ". Busca em Profundidade");
             runGame(1);
-            SolutionWriter.writeLog("Level " + i + ". Busca em Profundidade Iterativa");
+            SolutionWriter.writeLog("Level " + instances.indexOf(i) + ". Busca em Profundidade Iterativa");
             runGame(2);
-            SolutionWriter.writeLog("Level " + i + ". A*");
+            SolutionWriter.writeLog("Level " + instances.indexOf(i) + ". A*");
             runGame(3);
         }
     }

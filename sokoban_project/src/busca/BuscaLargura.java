@@ -5,9 +5,9 @@ import java.util.Queue;
 
 /**
  *
- * Busca a solução por busca em largura.
+ * Busca a soluï¿½ï¿½o por busca em largura.
  *
- *  @author Jomi Fred Hübner
+ *  @author Jomi Fred Hï¿½bner
  */
 public class BuscaLargura extends Busca {
     
@@ -40,6 +40,9 @@ public class BuscaLargura extends Busca {
             }
                         
             abertos.addAll( sucessores(n) );
+
+            if (status.getTempoDecorrido() > 1800000)
+                para();
         }
         status.termina(false);
         return null;
