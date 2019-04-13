@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d724f1a2-27be-4b29-992a-b802d589c6a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/sokoban_project_jar/sokoban_project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sokoban_project_jar/sokoban_project.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/Controller/SokobanController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/Controller/SokobanController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SokobanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SokobanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/busca/MostraStatusConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/busca/MostraStatusConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/busca/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/busca/Status.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/SokobanController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="140" column="47" lean-forward="true" selection-start-line="140" selection-start-column="47" selection-end-line="140" selection-end-column="47" />
+            <state relative-caret-position="139">
+              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/busca/Status.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="83">
@@ -141,6 +137,8 @@
       <find>notifycl</find>
       <find>notifyclean</find>
       <find>para</find>
+      <find>readin</find>
+      <find>system</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,9 +165,9 @@
         <option value="$PROJECT_DIR$/src/busca/BuscaLargura.java" />
         <option value="$PROJECT_DIR$/src/busca/BuscaIterativo.java" />
         <option value="$PROJECT_DIR$/src/busca/AEstrela.java" />
-        <option value="$PROJECT_DIR$/src/Controller/SokobanController.java" />
         <option value="$PROJECT_DIR$/src/busca/MostraStatusConsole.java" />
         <option value="$PROJECT_DIR$/src/busca/Status.java" />
+        <option value="$PROJECT_DIR$/src/Controller/SokobanController.java" />
       </list>
     </option>
   </component>
@@ -249,7 +247,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="sokoban_project" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555168201171" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555168857364" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
@@ -295,12 +293,12 @@
       <workItem from="1553421549395" duration="114000" />
       <workItem from="1553439506771" duration="92000" />
       <workItem from="1554769959070" duration="1852000" />
-      <workItem from="1555157358954" duration="10834000" />
+      <workItem from="1555157358954" duration="11529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37317000" />
+    <option name="totallyTimeSpent" value="38012000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -313,9 +311,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="738" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19166666" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19166666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -585,16 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/SokobanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="140" column="47" lean-forward="true" selection-start-line="140" selection-start-column="47" selection-end-line="140" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/busca/MostraStatusConsole.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -616,6 +603,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/SokobanController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

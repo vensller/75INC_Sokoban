@@ -1,0 +1,12 @@
+Fim da busca. 13 nodos visitados em 34 mili-seg
+Solução encontrada!
+Fim da busca. 47 nodos visitados em 39 mili-seg
+Solução não encontrada!
+Fim da busca. 4079 nodos visitados em 3741 mili-seg
+Solução não encontrada!
+Fim da busca. 2495 nodos visitados em 1432 mili-seg
+Solução encontrada!
+Fim da busca. 2495 nodos visitados em 1336 mili-seg
+Solução encontrada!
+Fim da busca. 42 nodos visitados em 30 mili-seg
+Solução encontrada!

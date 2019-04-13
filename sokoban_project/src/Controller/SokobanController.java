@@ -42,11 +42,11 @@ public class SokobanController implements StateObserver {
     }
 
     private void notifyStateCreated(){
-        System.out.println(countStateCreated);
+//        System.out.println(countStateCreated);
     }
 
     private void notifyStateVisited(String stateLog){
-        System.out.println(stateLog);
+//        System.out.println(stateLog);
     }
 
     public SokobanController(){
@@ -88,7 +88,7 @@ public class SokobanController implements StateObserver {
         instances = InstanceReader.readInstancesFromPath(path);
 
         if (instances != null) {
-            instance = instances.get(0);
+            instance = instances.get(8);
             notifyReadSuccess();
         }
         else notifyReadFail();
