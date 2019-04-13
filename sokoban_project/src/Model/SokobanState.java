@@ -1,23 +1,25 @@
 package Model;
 
-import busca.Antecessor;
 import busca.Estado;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class SokobanState implements Estado, Antecessor {
+public class SokobanState implements Estado{
 
     private String[][] map;
     private int rowPos;
     private int columnPos;
     private StateObserver observer;
+    private List<SokobanState> visited;
+    private List<Coordinate> boxes;
 
     private boolean findPlayerPosition(){
         for (int x = 0; x < map.length; x++)
             for (int y = 0; y < map[x].length; y++)
-                if (map[x][y].equals("@")){
+                if (map[x][y].equals("+") || map[x][y].equals(".+")){
                     rowPos = x;
                     columnPos = y;
                     return true;
@@ -29,19 +31,6 @@ public class SokobanState implements Estado, Antecessor {
     private boolean havePossibilityToFindPoint(int row, int column, String[][] cloneMap){
         return !((cloneMap[row + 1][column].equals("#") && ((cloneMap[row][column - 1].equals("#")) || (cloneMap[row][column + 1].equals("#")))) //Linha abaixo e coluna esquerda ou direita tem parede
                 || (cloneMap[row - 1][column].equals("#") && ((cloneMap[row][column - 1].equals("#")) || (cloneMap[row][column + 1].equals("#"))))); //linha acima e coluna esquerda ou direita tem parede
-    }
-
-    private boolean isDeadLock(int row, int column, String[][] cloneMap){
-        boolean isAtPoint = cloneMap[row][column].equals(".$");
-        boolean canMovement = (cloneMap[row - 1][column].equals(" ") || cloneMap[row - 1][column].equals("@") || cloneMap[row - 1][column].equals(".@"))
-                           && (cloneMap[row + 1][column].equals(" ") || cloneMap[row + 1][column].equals("@") || cloneMap[row + 1][column].equals(".@"))
-                           && (cloneMap[row][column - 1].equals(" ") || cloneMap[row][column - 1].equals("@") || cloneMap[row][column - 1].equals(".@"))
-                           && (cloneMap[row][column + 1].equals(" ") || cloneMap[row][column + 1].equals("@") || cloneMap[row][column + 1].equals(".@"));
-
-
-        boolean deadLock = !isAtPoint && !canMovement && !havePossibilityToFindPoint(row, column, cloneMap);
-
-        return deadLock;
     }
 
     private boolean changeBoxPos(int rowBox, int columnBox, EnumMov movement, String[][] cloneMap){
@@ -83,24 +72,26 @@ public class SokobanState implements Estado, Antecessor {
         if (canChange){
             cloneMap[newRow][newColumn] = newPos;
             cloneMap[rowBox][columnBox] = " ";
-
-            canChange = !isDeadLock(newRow, newColumn, cloneMap);
         }
 
         return canChange;
     }
 
-    private boolean changePlayerPos(int newRow, int newColumn, EnumMov movement, String[][] cloneMap){
+    private boolean changePlayerPos(int newRow, int newColumn, EnumMov movement, String[][] cloneMap, String actualPos){
         boolean canChange = false;
         String newPosAux = cloneMap[newRow][newColumn];
-        String newPos = "@";
+        String newPos = "+";
+        String oldPos = " ";
+
+        if (actualPos.equals(".+"))
+            oldPos = ".";
 
         if (newPosAux.equals(" "))
             canChange = true;
 
         if (newPosAux.equals(".")){
             canChange = true;
-            newPos = ".@";
+            newPos = ".+";
         }
 
         if (newPosAux.equals("$"))
@@ -108,44 +99,115 @@ public class SokobanState implements Estado, Antecessor {
 
         if (canChange) {
             cloneMap[newRow][newColumn] = newPos;
-            cloneMap[rowPos][columnPos] = " ";
+            cloneMap[rowPos][columnPos] = oldPos;
         }
 
         return canChange;
     }
 
+    private boolean stateVisited(SokobanState state){
+        for (SokobanState st : visited)
+            if (st.equals(state))
+                return true;
+
+        return false;
+    }
+
     private void movePlayerUp(List<Estado> list){
         String[][] cloneMap = Arrays.stream(map).map(r -> r.clone()).toArray(String[][]::new);
         if ((rowPos > 0)
-                && (changePlayerPos(rowPos -1, columnPos, EnumMov.UP, cloneMap)))
-            list.add(new SokobanState(cloneMap, observer));
+                && (changePlayerPos(rowPos -1, columnPos, EnumMov.UP, cloneMap, cloneMap[rowPos][columnPos]))) {
+            SokobanState state = new SokobanState(cloneMap, observer, visited);
+
+            if (!stateVisited(state) && !state.containDeadLock()) {
+                list.add(state);
+                visited.add(state);
+            }
+        }
+    }
+
+    private boolean containDeadLock(){
+        for (Coordinate coord : boxes){
+            if (map[coord.getX() + 1][coord.getY()].equals("#")
+                    && (map[coord.getX()][coord.getY() - 1]).equals("#")
+                        || map[coord.getX()][coord.getY() + 1].equals("#"))
+                return true;
+
+            if (map[coord.getX() - 1][coord.getY()].equals("#")
+                    && (map[coord.getX()][coord.getY() + 1].equals("#")
+                        || map[coord.getX()][coord.getY() + 1].equals("#")))
+                return true;
+        }
+
+        return false;
     }
 
     private void movePlayerDown(List<Estado> list){
         String[][] cloneMap = Arrays.stream(map).map(r -> r.clone()).toArray(String[][]::new);
         if ((rowPos + 1 < map.length)
-                && (changePlayerPos(rowPos + 1, columnPos, EnumMov.DOWN, cloneMap)))
-            list.add(new SokobanState(cloneMap, observer));
+                && (changePlayerPos(rowPos + 1, columnPos, EnumMov.DOWN, cloneMap, cloneMap[rowPos][columnPos]))){
+            SokobanState state = new SokobanState(cloneMap, observer, visited);
+
+            if (!stateVisited(state)) {
+                list.add(state);
+                visited.add(state);
+            }
+        }
     }
 
     private void movePlayerLeft(List<Estado> list){
         String[][] cloneMap = Arrays.stream(map).map(r -> r.clone()).toArray(String[][]::new);
         if ((columnPos > 0)
-                && (changePlayerPos(rowPos, columnPos - 1, EnumMov.LEFT, cloneMap)))
-            list.add(new SokobanState(cloneMap, observer));
+                && (changePlayerPos(rowPos, columnPos - 1, EnumMov.LEFT, cloneMap, cloneMap[rowPos][columnPos]))) {
+            SokobanState state = new SokobanState(cloneMap, observer, visited);
+
+            if (!stateVisited(state)) {
+                list.add(state);
+                visited.add(state);
+            }
+        }
     }
 
     private void movePlayerRight(List<Estado> list){
         String[][] cloneMap = Arrays.stream(map).map(r -> r.clone()).toArray(String[][]::new);
         if ((columnPos + 1 < map[0].length)
-                && (changePlayerPos(rowPos, columnPos + 1, EnumMov.RIGHT, cloneMap)))
-            list.add(new SokobanState(cloneMap, observer));
+                && (changePlayerPos(rowPos, columnPos + 1, EnumMov.RIGHT, cloneMap, cloneMap[rowPos][columnPos]))) {
+            SokobanState state = new SokobanState(cloneMap, observer, visited);
+
+            if (!stateVisited(state)) {
+                list.add(state);
+                visited.add(state);
+            }
+        }
     }
 
-    public SokobanState(String[][] map, StateObserver observer){
+    private String log(){
+        String result = "";
+        for (int x = 0; x < map.length; x++){
+            for (int y = 0; y < map[0].length; y++)
+                result += map[x][y];
+
+            result += "\n";
+        }
+
+        return result;
+    }
+
+    private void createBoxesList(){
+        boxes = new ArrayList<>();
+
+        for (int x = 0; x < map.length; x++)
+            for (int y = 0; y < map[x].length; y++)
+                if (map[x][y].equals("$"))
+                    boxes.add(new Coordinate(x, y));
+    }
+
+    public SokobanState(String[][] map, StateObserver observer, List<SokobanState> visited){
         this.map = map;
         this.observer = observer;
+        this.visited = visited;
         observer.stateCreated();
+        createBoxesList();
     }
 
     @Override
@@ -170,8 +232,9 @@ public class SokobanState implements Estado, Antecessor {
 
     @Override
     public List<Estado> sucessores() {
-        observer.stateVisited();
-        List<Estado> suc = new LinkedList<Estado>();
+        visited.add(this);
+        observer.stateVisited(log());
+        List<Estado> suc = new LinkedList<>();
 
         if (findPlayerPosition()) {
             movePlayerUp(suc);
@@ -193,11 +256,6 @@ public class SokobanState implements Estado, Antecessor {
         }else return false;
 
         return true;
-    }
-
-    @Override
-    public List<Estado> antecessores() {
-        return sucessores();
     }
 
     @Override

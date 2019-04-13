@@ -32,7 +32,7 @@ public class MostraStatusConsole extends Thread {
     public void run() {
         while (!stop) {
             try {
-                sleep(1000);
+                sleep(10000);
                 if (!stop && status != null) {
                     mostra();
                 }
@@ -50,9 +50,9 @@ public class MostraStatusConsole extends Thread {
         println("\tProfundidade atual="+status.profundidadeMax);
         println("\tTempo decorrido="+status.getTempoDecorrido());
         /* 
-        print("\nNúmero médio de sucessores="+melhor.nroMedioSucessores());
-        print("\nMédia de profundidade="+melhor.getProfundidadeMedia());
-        print("\nProfundidade máxima="+melhor.profundidadeMax);
+        print("\nNï¿½mero mï¿½dio de sucessores="+melhor.nroMedioSucessores());
+        print("\nMï¿½dia de profundidade="+melhor.getProfundidadeMedia());
+        print("\nProfundidade mï¿½xima="+melhor.profundidadeMax);
         */
     }
 

@@ -5,7 +5,4 @@ public interface SokobanObserver {
     void instanceReadFail();
     void solutionNotFound();
     void refreshTable(int SolutionCount);
-    void stateCreated(int countState);
-    void stateVisited(int countState);
-    void cleanLog();
 }

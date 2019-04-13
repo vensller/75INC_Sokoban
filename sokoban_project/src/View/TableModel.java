@@ -15,12 +15,12 @@ public class TableModel extends AbstractTableModel {
         this.controller = controller;
         this.images = new HashMap<>();
         images.put("#", new ImageIcon("images/wall.png"));
-        images.put("@", new ImageIcon("images/player.png"));
+        images.put("+", new ImageIcon("images/player.png"));
         images.put("$", new ImageIcon("images/box.png"));
         images.put(" ", new ImageIcon("images/blank.png"));
         images.put(".", new ImageIcon("images/point.png"));
         images.put(".$", new ImageIcon("images/boxAtPoint.png"));
-        images.put(".@", new ImageIcon("images/playerAtPoint.png"));
+        images.put(".+", new ImageIcon("images/playerAtPoint.png"));
     }
 
     @Override

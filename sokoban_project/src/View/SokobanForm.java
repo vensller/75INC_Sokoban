@@ -14,9 +14,7 @@ public class SokobanForm extends JFrame implements SokobanObserver {
     private JComboBox cbSearchAlg;
     private JTable tblGame;
     private JButton btnSearch;
-    private JTextArea txaAlgorithm;
     private JLabel lblArchive;
-    private JScrollPane scrollPane;
     private TableRenderer tableRenderer;
     private TableModel tableModel;
     private SokobanController controller;
@@ -30,7 +28,6 @@ public class SokobanForm extends JFrame implements SokobanObserver {
     }
 
     private void initData(){
-        cleanLog();
         controller = new SokobanController();
         controller.observe(this);
         tableRenderer = new TableRenderer();
@@ -50,12 +47,12 @@ public class SokobanForm extends JFrame implements SokobanObserver {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fileChooser = new JFileChooser(System.getProperty("user.dir"));
+                fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
                 int retorno = fileChooser.showOpenDialog(tblGame);
 
                 if (retorno == JFileChooser.APPROVE_OPTION){
-                    cleanLog();
                     lblArchive.setText(fileChooser.getSelectedFile().getName());
-                    controller.readInstance(fileChooser.getSelectedFile().getAbsolutePath());
+                    controller.readInstancesFromPath(fileChooser.getSelectedFile().getAbsolutePath());
                 }
             }
         });
@@ -77,7 +74,7 @@ public class SokobanForm extends JFrame implements SokobanObserver {
 
     @Override
     public void instanceReadFail() {
-        JOptionPane.showMessageDialog(this, "Fail to read the instance, please choose another!");
+        JOptionPane.showMessageDialog(this, "Fail to read intances, please choose another path!");
         lblArchive.setText("");
     }
 
@@ -107,24 +104,4 @@ public class SokobanForm extends JFrame implements SokobanObserver {
         t.start();
     }
 
-    @Override
-    public void stateCreated(int countState) {
-        txaAlgorithm.append("New state created. Created " + countState + " states.\n");
-        JScrollBar vertical = scrollPane.getVerticalScrollBar();
-        vertical.setValue(vertical.getMaximum());
-    }
-
-    @Override
-    public void stateVisited(int countState) {
-        txaAlgorithm.append("New state visited. Visited " + countState + " states.\n");
-        JScrollBar vertical = scrollPane.getVerticalScrollBar();
-        vertical.setValue(vertical.getMaximum());
-    }
-
-    @Override
-    public void cleanLog() {
-        txaAlgorithm.setText("Algorithm Result: \n");
-        JScrollBar vertical = scrollPane.getVerticalScrollBar();
-        vertical.setValue(vertical.getMaximum());
-    }
 }

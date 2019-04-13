@@ -8,37 +8,40 @@ import java.util.List;
 
 public class InstanceReader {
 
-    public static Instance readInstanceFromFile(String archive){
-        Instance instance = null;
+    public static List<Instance> readInstancesFromPath(String path){
+        List<Instance> instances = new ArrayList<>();
 
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new FileReader(archive));
-            String str = reader.readLine();
-            String[] arrayStr = str.split(" ");
-            instance = new Instance(Integer.parseInt(arrayStr[0]), Integer.parseInt(arrayStr[1]));
+            for (int x = 1; x <= 10; x++) {
+                reader = new BufferedReader(new FileReader(path + "/level" + x + ".txt"));
+                String str = reader.readLine();
+                String[] arrayStr = str.split(" ");
+                Instance instance = new Instance(Integer.parseInt(arrayStr[0]), Integer.parseInt(arrayStr[1]));
 
-            int line = 0;
-            while ((str = reader.readLine()) != null){
-                arrayStr = str.split("");
+                int line = 0;
+                while ((str = reader.readLine()) != null) {
+                    arrayStr = str.split("");
 
-                if (arrayStr.length != instance.getColumns())
-                    throw new IOException();
+                    if (arrayStr.length != instance.getColumns())
+                        throw new IOException();
 
-                for (int x = 0; x < arrayStr.length; x++)
-                    instance.getMap()[line][x] = arrayStr[x];
+                    for (int y = 0; y < arrayStr.length; y++)
+                        instance.getMap()[line][y] = arrayStr[y];
 
-                line++;
+                    line++;
+                }
+                instances.add(instance);
             }
         }catch (FileNotFoundException ex){
             ex.printStackTrace();
-            instance = null;
+            instances = null;
         } catch (IOException e) {
             e.printStackTrace();
-            instance = null;
+            instances = null;
         }
 
-        return instance;
+        return instances;
     }
 
     public static List<Instance> readInstanceFromText(String text){

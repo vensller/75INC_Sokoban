@@ -12,6 +12,7 @@ import java.util.List;
 
 public class SokobanController implements StateObserver {
 
+    private List<Instance> instances;
     private Instance instance;
     private List<SokobanObserver> observers;
     private List<Instance> solution;
@@ -39,18 +40,11 @@ public class SokobanController implements StateObserver {
     }
 
     private void notifyStateCreated(){
-        for (SokobanObserver obs : observers)
-            obs.stateCreated(countStateCreated);
+        System.out.println(countStateCreated);
     }
 
-    private void notifyStateVisited(){
-        for (SokobanObserver obs : observers)
-            obs.stateVisited(countStateVisited);
-    }
-
-    private void notifyCleanLog(){
-        for (SokobanObserver obs : observers)
-            obs.cleanLog();
+    private void notifyStateVisited(String stateLog){
+        System.out.println(stateLog);
     }
 
     public SokobanController(){
@@ -88,11 +82,13 @@ public class SokobanController implements StateObserver {
         return algorithms;
     }
 
-    public void readInstance(String archive){
-        instance = InstanceReader.readInstanceFromFile(archive);
+    public void readInstancesFromPath(String path){
+        instances = InstanceReader.readInstancesFromPath(path);
 
-        if (instance != null)
+        if (instances != null) {
+            instance = instances.get(1);
             notifyReadSuccess();
+        }
         else notifyReadFail();
     }
 
@@ -100,22 +96,21 @@ public class SokobanController implements StateObserver {
         EnumAlg algorithm = EnumAlg.values()[alg];
         countStateCreated = 0;
         countStateVisited = 0;
-        notifyCleanLog();
         Nodo nodo = null;
 
         if (instance != null) {
             switch (algorithm) {
                 case BREADTH_FIRST:
-                    nodo = new BuscaLargura().busca(new SokobanState(instance.getMap(), this));
+                    nodo = new BuscaLargura(new MostraStatusConsole()).busca(new SokobanState(instance.getMap(), this, new ArrayList<>()));
                     break;
                 case DEPTH:
-                    nodo = new BuscaProfundidade().busca(new SokobanState(instance.getMap(), this));
+                    nodo = new BuscaProfundidade(new MostraStatusConsole()).busca(new SokobanState(instance.getMap(), this, new ArrayList<>()));
                     break;
                 case ITERATIVEDEPTH:
-                    nodo = new BuscaIterativo().busca(new SokobanState(instance.getMap(), this));
+                    nodo = new BuscaIterativo(new MostraStatusConsole()).busca(new SokobanState(instance.getMap(), this, new ArrayList<>()));
                     break;
                 case ASTAR:
-                    nodo = new AEstrela().busca(new SokobanState(instance.getMap(), this));
+                    nodo = new AEstrela(new MostraStatusConsole()).busca(new SokobanState(instance.getMap(), this, new ArrayList<>()));
                     break;
             }
 
@@ -137,8 +132,8 @@ public class SokobanController implements StateObserver {
     }
 
     @Override
-    public void stateVisited() {
+    public void stateVisited(String stateLog) {
         countStateVisited++;
-        notifyStateVisited();
+        notifyStateVisited(stateLog);
     }
 }

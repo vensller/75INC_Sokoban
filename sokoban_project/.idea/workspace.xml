@@ -1,7 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d724f1a2-27be-4b29-992a-b802d589c6a3" name="Default Changelist" comment="" />
+    <list default="true" id="d724f1a2-27be-4b29-992a-b802d589c6a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Model/Coordinate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/__MACOSX/buscaJava/doc/manual/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/__MACOSX/buscaJava/doc/manual/._manualBuscaJava.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/AppletDemoBusca.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/buscaJava.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/AEstrela.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/Aleatorio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/Antecessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/Busca.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/BuscaBidirecional.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/BuscaHeuristica$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/BuscaHeuristica.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/BuscaIterativo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/BuscaLargura.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/BuscaProfundidade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/BuscaRecursiva.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/Estado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/Heuristica.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/MostraStatusConsole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/Nodo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/busca/SubidaMontanha.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/exemplos/Estado8Puzzle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/exemplos/EstadoJarros.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/exemplos/EstadoMapa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/exemplos/EstadoRainhas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/exemplos/HLAC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/exemplos/MissionarioCanibal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/exemplos/QuadradoMagico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/exemplos/QuadradoMagicoB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/grafo/Aresta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/grafo/ArestaDirigida.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/grafo/ArestaDirigidaValorada.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/grafo/ArestaNaoDirigida.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/grafo/ArestaNaoDirigidaValorada.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/grafo/ArestaValorada.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/grafo/Grafo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/grafo/GrafoDirigido.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/grafo/GrafoNaoDirigido.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/grafo/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/grafo/Vertice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$Jarros.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$P_HLAC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$P_Mapa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$P_MisCa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$P_Puzzle1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$P_Puzzle2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$P_Puzzle3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$P_Quadrado1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$P_Quadrado2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$P_Rainhas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca$Problema.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/classes/util/AppletDemoBusca.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/allclasses-noframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/AEstrela.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/Aleatorio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/Antecessor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/Busca.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/BuscaBidirecional.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/BuscaHeuristica.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/BuscaIterativo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/BuscaLargura.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/BuscaProfundidade.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/BuscaRecursiva.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/Estado.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/Heuristica.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/MostraStatusConsole.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/Nodo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/Status.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/SubidaMontanha.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/busca/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/overview-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/packages.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/resources/inherit.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/util/AppletDemoBusca.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/util/Heap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/util/PriorityQueue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/util/Priority_Queue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/util/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/util/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/apidoc/util/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/busca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/busca.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/busca.ucd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/hlca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/hlca.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/hlca.ucd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/.directory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/HLAC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/figuras/busca.bb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/figuras/busca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/figuras/hlca.bb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/figuras/hlca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/html/WARNINGS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/html/labels.pl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/html/manualBuscaJava.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/html/manualBuscaJava.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/manualBuscaJava.aux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/manualBuscaJava.dvi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/manualBuscaJava.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/manualBuscaJava.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/manualBuscaJava.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/doc/manual/manualBuscaJava.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/AEstrela.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/Aleatorio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/Antecessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/Busca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/BuscaBidirecional.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/BuscaHeuristica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/BuscaIterativo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/BuscaLargura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/BuscaProfundidade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/BuscaRecursiva.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/Estado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/Heuristica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/MostraStatusConsole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/Nodo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/busca/SubidaMontanha.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/buscaJava.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/exemplos/Estado8Puzzle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/exemplos/EstadoJarros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/exemplos/EstadoMapa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/exemplos/EstadoRainhas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/exemplos/HLAC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/exemplos/MissionarioCanibal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/exemplos/QuadradoMagico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/exemplos/QuadradoMagicoB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/grafo/Aresta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/grafo/ArestaDirigida.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/grafo/ArestaDirigidaValorada.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/grafo/ArestaNaoDirigida.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/grafo/ArestaNaoDirigidaValorada.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/grafo/ArestaValorada.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/grafo/Grafo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/grafo/GrafoDirigido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/grafo/GrafoNaoDirigido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/grafo/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/grafo/Vertice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Search Lib/buscaJava/src/util/AppletDemoBusca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataset/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dataset/level1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataset/level2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dataset/level2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataset/level3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dataset/level3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataset/level4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dataset/level4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataset/level5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dataset/level5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataset/level6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dataset/level6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/Controller/SokobanController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/Controller/SokobanController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/Controller/SokobanController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/Controller/SokobanController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/Controller/SokobanObserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/Controller/SokobanObserver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/Model/SokobanState$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/Model/SokobanState$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/Model/SokobanState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/Model/SokobanState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/Model/StateObserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/Model/StateObserver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/Utilities/InstanceReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/Utilities/InstanceReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/View/SokobanForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/View/SokobanForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/View/SokobanForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/View/SokobanForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/View/SokobanForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/View/SokobanForm$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/View/SokobanForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/View/SokobanForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sokoban_project/View/TableModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sokoban_project/View/TableModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SokobanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SokobanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SokobanObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SokobanObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/SokobanState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/SokobanState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/StateObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/StateObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utilities/InstanceReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilities/InstanceReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SokobanForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SokobanForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SokobanForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SokobanForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/TableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/TableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/busca/MostraStatusConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/busca/MostraStatusConsole.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,82 +226,88 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/SokobanState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="172" column="32" selection-start-line="172" selection-start-column="32" selection-end-line="172" selection-end-column="32" />
+            <state relative-caret-position="106">
+              <caret line="131" column="72" lean-forward="true" selection-start-line="131" selection-start-column="72" selection-end-line="131" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5415#5416#0" expanded="true" />
-                <element signature="e#5477#5478#0" expanded="true" />
-                <element signature="e#5789#5790#0" expanded="true" />
-                <element signature="e#5813#5814#0" expanded="true" />
-                <element signature="e#6546#6547#0" expanded="true" />
-                <element signature="e#6581#6582#0" expanded="true" />
+                <element signature="e#6814#6815#0" expanded="true" />
+                <element signature="e#7150#7151#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/StateObserver.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/Coordinate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="165">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <folding>
+                <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#321#322#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#378#379#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/SokobanObserver.java">
+        <entry file="file://$PROJECT_DIR$/src/busca/Busca.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+            <state relative-caret-position="111">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/busca/BuscaLargura.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="e#361#362#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/SokobanController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="112" column="54" lean-forward="true" selection-start-line="112" selection-start-column="54" selection-end-line="112" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1082#1083#0" expanded="true" />
+                <element signature="e#1102#1103#0" expanded="true" />
+                <element signature="e#1190#1191#0" expanded="true" />
+                <element signature="e#1234#1235#0" expanded="true" />
+                <element signature="e#3718#3719#0" expanded="true" />
+                <element signature="e#3772#3773#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/SokobanController.java">
+        <entry file="file://$PROJECT_DIR$/src/busca/MostraStatusConsole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="108" column="44" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
+            <state relative-caret-position="99">
+              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3659#3660#0" expanded="true" />
-                <element signature="e#3713#3714#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/busca/Status.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/busca/BuscaProfundidade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-              <folding>
+                <element signature="e#211#212#0" expanded="true" />
+                <element signature="e#242#243#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
                 <element signature="e#400#401#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
+                <element signature="e#443#444#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/EnumAlg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -111,22 +315,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/SokobanForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1378">
-              <caret line="105" column="10" lean-forward="true" selection-start-line="105" selection-start-column="10" selection-end-line="105" selection-end-column="10" />
+            <state relative-caret-position="347">
+              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2527#2528#0" expanded="true" />
-                <element signature="e#2609#2610#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/TableRenderer.java">
+        <entry file="file://$PROJECT_DIR$/src/Controller/SokobanObserver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="106" selection-start-line="11" selection-start-column="106" selection-end-line="11" selection-end-column="106" />
+            <state relative-caret-position="60">
+              <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utilities/InstanceReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="61">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,6 +359,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>instance</find>
+      <find>@</find>
+      <find>antece</find>
+      <find>changePlayerPos</find>
+      <find>containDeadLock</find>
+      <find>notifycl</find>
+      <find>notifyclean</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,16 +376,18 @@
         <option value="$PROJECT_DIR$/src/Model/Instance.java" />
         <option value="$PROJECT_DIR$/src/Principal.java" />
         <option value="$PROJECT_DIR$/src/View/TableRenderer.java" />
-        <option value="$PROJECT_DIR$/src/View/TableModel.java" />
         <option value="$PROJECT_DIR$/src/Model/EnumMov.java" />
-        <option value="$PROJECT_DIR$/src/Utilities/InstanceReader.java" />
         <option value="$PROJECT_DIR$/src/Model/EnumAlg.java" />
+        <option value="$PROJECT_DIR$/src/View/TableModel.java" />
         <option value="$PROJECT_DIR$/src/Model/StateObserver.java" />
+        <option value="$PROJECT_DIR$/src/Utilities/InstanceReader.java" />
+        <option value="$PROJECT_DIR$/src/Model/Coordinate.java" />
         <option value="$PROJECT_DIR$/src/Model/SokobanState.java" />
         <option value="$PROJECT_DIR$/src/Controller/SokobanObserver.java" />
-        <option value="$PROJECT_DIR$/src/View/SokobanForm.java" />
         <option value="$PROJECT_DIR$/src/View/SokobanForm.form" />
+        <option value="$PROJECT_DIR$/src/View/SokobanForm.java" />
         <option value="$PROJECT_DIR$/src/Controller/SokobanController.java" />
+        <option value="$PROJECT_DIR$/src/busca/MostraStatusConsole.java" />
       </list>
     </option>
   </component>
@@ -190,8 +409,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,7 +469,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554771362962" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555164180024" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -296,11 +515,12 @@
       <workItem from="1553421549395" duration="114000" />
       <workItem from="1553439506771" duration="92000" />
       <workItem from="1554769959070" duration="1852000" />
+      <workItem from="1555157358954" duration="6818000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26481000" />
+    <option name="totallyTimeSpent" value="33301000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -312,10 +532,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="0" y="-1" width="1366" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19166666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -324,8 +544,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290461" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3290461" />
@@ -334,7 +554,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3290461" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3290461" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -350,16 +570,6 @@
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller/SokobanController.java</url>
-          <line>105</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="((SokobanState)suc.get(1)).map" custom="Model.SokobanState" />
@@ -384,35 +594,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Enum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
-          <folding>
-            <element signature="e#2036#2037#0" expanded="true" />
-            <element signature="e#2063#2064#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/busca/Busca.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/BufferedReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="114" column="11" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
-          <folding>
-            <element signature="e#3011#3012#0" expanded="true" />
-            <element signature="e#3058#3059#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Enum.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/BufferedReader.java" />
     <entry file="file://$PROJECT_DIR$/src/busca/Nodo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -420,38 +603,6 @@
           <folding>
             <element signature="e#2939#2940#0" expanded="true" />
             <element signature="e#2980#2981#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utilities/InstanceReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/TableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/TableRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="106" selection-start-line="11" selection-start-column="106" selection-end-line="11" selection-end-column="106" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -470,13 +621,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/function/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/function/Function.java" />
     <entry file="file://$PROJECT_DIR$/src/busca/Estado.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -498,51 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/SokobanState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="172" column="32" selection-start-line="172" selection-start-column="32" selection-end-line="172" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5415#5416#0" expanded="true" />
-            <element signature="e#5477#5478#0" expanded="true" />
-            <element signature="e#5789#5790#0" expanded="true" />
-            <element signature="e#5813#5814#0" expanded="true" />
-            <element signature="e#6546#6547#0" expanded="true" />
-            <element signature="e#6581#6582#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/StateObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/SokobanObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/SokobanForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/SokobanForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1378">
-          <caret line="105" column="10" lean-forward="true" selection-start-line="105" selection-start-column="10" selection-end-line="105" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2527#2528#0" expanded="true" />
-            <element signature="e#2609#2610#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/busca/Status.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -550,10 +650,115 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/TableRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="106" selection-start-line="11" selection-start-column="106" selection-end-line="11" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/TableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1133#1134#0" expanded="true" />
+            <element signature="e#1187#1188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/StateObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utilities/InstanceReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/busca/Busca.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/busca/BuscaLargura.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Coordinate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/SokobanState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="131" column="72" lean-forward="true" selection-start-line="131" selection-start-column="72" selection-end-line="131" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6814#6815#0" expanded="true" />
+            <element signature="e#7150#7151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/SokobanForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/SokobanObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/SokobanForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/busca/BuscaProfundidade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        <state relative-caret-position="301">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
           <folding>
             <element signature="e#400#401#0" expanded="true" />
             <element signature="e#427#428#0" expanded="true" />
@@ -563,10 +768,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/SokobanController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="112" column="54" lean-forward="true" selection-start-line="112" selection-start-column="54" selection-end-line="112" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1082#1083#0" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+            <element signature="e#1190#1191#0" expanded="true" />
+            <element signature="e#1234#1235#0" expanded="true" />
+            <element signature="e#3718#3719#0" expanded="true" />
+            <element signature="e#3772#3773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/busca/MostraStatusConsole.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="99">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
           <folding>
             <element signature="e#211#212#0" expanded="true" />
             <element signature="e#242#243#0" expanded="true" />
@@ -574,29 +795,6 @@
             <element signature="e#400#401#0" expanded="true" />
             <element signature="e#443#444#0" expanded="true" />
             <element signature="e#474#475#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/busca/BuscaLargura.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding>
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/SokobanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="108" column="44" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3659#3660#0" expanded="true" />
-            <element signature="e#3713#3714#0" expanded="true" />
           </folding>
         </state>
       </provider>
