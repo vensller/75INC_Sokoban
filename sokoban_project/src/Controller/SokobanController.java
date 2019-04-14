@@ -10,6 +10,7 @@ import busca.*;
 
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SokobanController implements StateObserver {
@@ -103,16 +104,16 @@ public class SokobanController implements StateObserver {
         if (instance != null) {
             switch (algorithm) {
                 case BREADTH_FIRST:
-                    nodo = new BuscaLargura(new MostraStatusConsole()).busca(new SokobanState(instance.getMap(), this, new ArrayList<>()));
+                    nodo = new BuscaLargura(new MostraStatusConsole()).busca(new SokobanState(Arrays.stream(instance.getMap()).map(r -> r.clone()).toArray(String[][]::new), this, new ArrayList<>()));
                     break;
                 case DEPTH:
-                    nodo = new BuscaProfundidade(new MostraStatusConsole()).busca(new SokobanState(instance.getMap(), this, new ArrayList<>()));
+                    nodo = new BuscaProfundidade(new MostraStatusConsole()).busca(new SokobanState(Arrays.stream(instance.getMap()).map(r -> r.clone()).toArray(String[][]::new), this, new ArrayList<>()));
                     break;
                 case ITERATIVEDEPTH:
-                    nodo = new BuscaIterativo(new MostraStatusConsole()).busca(new SokobanState(instance.getMap(), this, new ArrayList<>()));
+                    nodo = new BuscaIterativo(new MostraStatusConsole()).busca(new SokobanState(Arrays.stream(instance.getMap()).map(r -> r.clone()).toArray(String[][]::new), this, new ArrayList<>()));
                     break;
                 case ASTAR:
-                    nodo = new AEstrela(new MostraStatusConsole()).busca(new SokobanState(instance.getMap(), this, new ArrayList<>()));
+                    nodo = new AEstrela(new MostraStatusConsole()).busca(new SokobanState(Arrays.stream(instance.getMap()).map(r -> r.clone()).toArray(String[][]::new), this, new ArrayList<>()));
                     break;
             }
 
@@ -148,10 +149,13 @@ public class SokobanController implements StateObserver {
             instance = i;
             SolutionWriter.writeLog("\nLevel " + (instances.indexOf(i) + 1) + ". Busca em Largura");
             runGame(0);
+            instance = i;
             SolutionWriter.writeLog("\nLevel " + (instances.indexOf(i) + 1) + ". Busca em Profundidade");
             runGame(1);
+            instance = i;
             SolutionWriter.writeLog("\nLevel " + (instances.indexOf(i) + 1) + ". Busca em Profundidade Iterativa");
             runGame(2);
+            instance = i;
             SolutionWriter.writeLog("\nLevel " + (instances.indexOf(i) + 1) + ". A*");
             runGame(3);
         }

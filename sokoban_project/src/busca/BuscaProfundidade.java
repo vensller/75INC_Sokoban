@@ -56,7 +56,7 @@ public class BuscaProfundidade extends Busca {
                 abertos.addAll( 0, sucessores(n) );
             }
 
-            if (status.getTempoDecorrido() > 1800000)
+            if (status.getTempoDecorrido() > 900000)
                 para();
         }
         status.termina(false);

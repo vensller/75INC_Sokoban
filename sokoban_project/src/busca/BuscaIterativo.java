@@ -59,7 +59,7 @@ public class BuscaIterativo extends BuscaProfundidade {
                 status.termina(true);
                 return n;
             }
-            if (status.getTempoDecorrido() > 1800000)
+            if (status.getTempoDecorrido() > 900000)
                 para();
         }
 

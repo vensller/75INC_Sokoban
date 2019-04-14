@@ -41,7 +41,7 @@ public class BuscaLargura extends Busca {
                         
             abertos.addAll( sucessores(n) );
 
-            if (status.getTempoDecorrido() > 1800000)
+            if (status.getTempoDecorrido() > 900000)
                 para();
         }
         status.termina(false);

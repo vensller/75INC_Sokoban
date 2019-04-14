@@ -74,7 +74,7 @@ public class AEstrela extends BuscaHeuristica {
                 theBest = melhor;
                 //print("\nMelhor (em profundidade "+melhor.getProfundidade()+", h="+((Heuristica)theBest.estado).h()+")="+melhor);
             }
-            if (status.getTempoDecorrido() > 1800000)
+            if (status.getTempoDecorrido() > 900000)
                 para();
             
         }
